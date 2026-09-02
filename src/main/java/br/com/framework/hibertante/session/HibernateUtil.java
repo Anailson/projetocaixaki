@@ -20,7 +20,7 @@ import org.hibernate.engine.SessionFactoryImplementor;
  * @author anailson
  *
  */
-@ApplicationScoped
+@ApplicationScoped   //@ApplicationScoped -> indicar que o hibernateUtil será aplicado em toda a aplicação
 public class HibernateUtil implements Serializable  {
 	
 	private static final String JAVA_COMP_ENV_JDBC_DATA_SOURCE = "java:/comp/env/jdbc/datasouce";
@@ -107,7 +107,6 @@ public class HibernateUtil implements Serializable  {
 		return (DataSource) context
 				.lookup(br.com.framework.implementacao.crud.VariavelConexaoUtil.JAVA_COMP_ENV_JDBC_DATA_SOURCE);
 	}
-
 
 
 	
